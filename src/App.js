@@ -1,6 +1,7 @@
 import "./App.scss";
 import Card from "./component/card/index";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import CardList from "./component/cardlist";
 
 function App() {
   const ref = useRef();
@@ -17,6 +18,7 @@ function App() {
   //       console.log(data.data[0]);
   //     });
   // }, []);
+  const [list, setList] = useState([]);
   const addCards = () => {
     const classArr = ref.current.className;
     if (classArr.includes("show")) {
@@ -38,9 +40,10 @@ function App() {
             Create a colour card
           </div>
           <div className="cardDetails show" ref={ref}>
-            <Card />
+            <Card setList={setList} />
           </div>
         </div>
+        <CardList />
       </div>
     </div>
   );

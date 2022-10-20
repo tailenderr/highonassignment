@@ -1,6 +1,6 @@
 import "./index.scss";
 import { useState, useEffect } from "react";
-const Card = () => {
+const Card = ({ setList }) => {
   const [apiData, setApiData] = useState([]);
   const [selectColor, setSelectColor] = useState({});
 
@@ -15,15 +15,18 @@ const Card = () => {
         console.log(data.data[0]);
       });
   }, []);
-  console.log(apiData[0]);
+  // function to select current color and save in list state recieved from props
+  const handleSelect = () => {};
+  // console.log(apiData[0]);
   return (
+    // component to select and save card
     <div className="selectedCardContainer">
       <h1>Select the color</h1>
       <div className="colorTagBox">
         <span
           style={{ backgroundColor: apiData[0].code }}
           onClick={() => {
-            handleSelect(apiData);
+            handleSelect();
           }}
         ></span>
         <span style={{ backgroundColor: apiData[1].code }}></span>
