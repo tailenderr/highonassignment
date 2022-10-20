@@ -1,0 +1,17 @@
+.selectedCardContainer {
+  color: white;
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .colorTagBox {
+    display: flex;
+    justify-content: space-around;
+    span {
+      width: 2rem;
+      height: 1rem;
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+}
