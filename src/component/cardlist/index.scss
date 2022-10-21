@@ -1,0 +1,63 @@
+.card {
+  margin: 1rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  .cardHead {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 1rem;
+    .colorBlock {
+      border: 1px solid black;
+      border-radius: 0.6rem;
+      display: inline-block;
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+  .cardFooter {
+    display: flex;
+    justify-content: space-evenly;
+
+    .footerContainer {
+      margin: 1.5rem 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 1%;
+      .footerContent {
+        height: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .traitContainer {
+          display: flex;
+          flex-direction: column;
+          .traitName {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    .titleButton {
+      margin: 1rem;
+      width: 80%;
+      height: 4rem;
+      border-radius: 1rem;
+      font-size: 1.8rem;
+    }
+  }
+  .display {
+    display: block;
+  }
+  .notDisplay {
+    display: none;
+  }
+  .displayButton {
+    margin: 1rem;
+    cursor: pointer;
+    &:hover {
+      color: aqua;
+    }
+  }
+}

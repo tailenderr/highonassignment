@@ -14,8 +14,7 @@
     }
     .createCardContainer {
       background-color: gray;
-      padding: 4rem;
-      padding-top: 2rem;
+      padding: 1.8rem 3rem;
       border-radius: 1.5rem;
       .createCardHeader {
         cursor: pointer;
@@ -29,6 +28,7 @@
           height: 0.2rem;
         }
       }
+      // transition effect can be added in show and hide
       .show {
         display: block;
       }
